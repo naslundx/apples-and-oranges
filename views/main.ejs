@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Apples and oranges</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="assets/styles.css">
+        <script src="/assets/client-to-server.js"></script>
+    </head>
+    <body>
+        <h1>Apples and oranges</h1>
+        <h2>Can you pair up
+            <%= first.title %>
+            with
+            <%= second.title %>
+            ?</h2>
+        <div id="items-table">
+            <ul>
+                <!-- also draw images for each element -->
+                <% for(var i=0; i < first.items.length; i++) { %>
+                    <li><%= first.items[i] %></li>
+                <% } %>
+            </ul>
+        </div>
+        </br>
+        <div id="items-table">
+            <ul>
+                <% for(var i=0; i < second.items.length; i++) { %>
+                    <li><%= second.items[i] %></li>
+                <% } %>
+            </ul>
+        </div>
+        <form>
+            <button type="submit">Done</button>
+        </form>
+        </br>
+        <a href="about">What is this?</a>
+    </body>
+</html>
