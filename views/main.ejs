@@ -4,6 +4,10 @@
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="assets/styles.css">
         <script src="/assets/client-to-server.js"></script>
+        <script src="/assets/Sortable.js">
+            var el = document.getElementById('items');
+            var sortable = Sortable.create(el);
+        </script>
     </head>
     <body>
         <h1>Apples and oranges</h1>
@@ -12,22 +16,62 @@
             with
             <%= second.title %>
             ?</h2>
-        <div id="items-table">
-            <ul>
-                <!-- also draw images for each element -->
-                <% for(var i=0; i < first.items.length; i++) { %>
-                    <li><%= first.items[i] %></li>
-                <% } %>
-            </ul>
+        
+        <table>
+        <tr>
+        <td>
+        <div id="firstList" class="list-group">
+            <% for(var i=0; i < first.items.length; i++) { %>
+                <div class="list-group-item">
+                    <img src= "assets/img/<%= first.items[i] %>.png"/>
+                    <%= first.items[i] %>
+                </div>
+            <% } %>
         </div>
-        </br>
-        <div id="items-table">
-            <ul>
-                <% for(var i=0; i < second.items.length; i++) { %>
-                    <li><%= second.items[i] %></li>
-                <% } %>
-            </ul>
+        </td>
+        <td>
+        < === >
+        </td>
+        <td>
+        <div id="secondList">
+            <% for(var i=0; i < second.items.length; i++) { %>
+                <div class="list-group-item">
+                    <img src= "assets/img/<%= second.items[i] %>.png"/>
+                    <%= second.items[i] %>
+                </div>
+            <% } %>
         </div>
+        </td>
+        </tr>
+        </table>
+
+        <script language="javascript">
+            var firstId = <%= firstId %>;
+            var secondId = <%= secondId %>;
+            var firstIndices = [];
+            var secondIndices = [];
+            for (var i=0; i < <%= first.items.length %>; i++) { 
+                firstIndices.push(i);
+                secondIndices.push(i);
+            }
+
+            Sortable.create(firstList, { 
+                onEnd: function (evt) {
+                    var temp = firstIndices[evt.newIndex];
+                    firstIndices[evt.newIndex] = firstIndices[evt.oldIndex];
+                    firstIndices[evt.oldIndex] = temp;
+                    console.log(firstIndices);
+                }
+            });
+            Sortable.create(secondList, { 
+                onEnd: function (evt) {
+                    var temp = secondList[evt.newIndex];
+                    secondList[evt.newIndex] = secondList[evt.oldIndex];
+                    secondList[evt.oldIndex] = temp;
+                }
+            });
+        </script>
+
         <form>
             <button type="submit">Done</button>
         </form>
