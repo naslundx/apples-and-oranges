@@ -25,9 +25,9 @@ var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 module.exports = function(app) {
 
-app.get('/main', function(req, res) {
+app.get('/', function(req, res) {
     // Random set size
-    var size = 3; //Math.floor(Math.random() * 6) + 2;
+    var size = 3; // Math.floor(Math.random() * 6) + 2;
 
     // Fetch all of certain size
     SetModel.find({'size': size}, function (err, data) {
@@ -36,22 +36,17 @@ app.get('/main', function(req, res) {
         }
         var first = Math.floor(Math.random() * data.length);
         var second = (first + 1 + Math.floor(Math.random() * (data.length - 1))) % data.length;
-        
-        //console.log(first + ':' + data[first]);
-        //console.log(second + ':' + data[second]);
 
         res.render('main', {firstId: data[first].id, secondId: data[second].id, first: data[first], second: data[second]});
     });
 });
 
-app.post('/main', urlencodedParser, function(req, res) {
+app.post('/', urlencodedParser, function(req, res) {
     // Get the data client has sent and store as result
     var newResultModel = ResultModel(req.body).save(function (err, data) {
         if (err) {
             throw err;
         }
-
-        console.log(req.body);
 
         var item = ResultModel({
             firstId: req.body['firstId'],

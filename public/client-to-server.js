@@ -11,7 +11,7 @@ $(document).ready(function(){
 
       $.ajax({
         type: 'POST',
-        url: '/main',
+        url: '/',
         data: result,
         success: function(data){
           window.location.href = 'thanks';
