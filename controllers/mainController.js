@@ -27,7 +27,7 @@ module.exports = function(app) {
 
 app.get('/', function(req, res) {
     // Random set size
-    var size = 3; // Math.floor(Math.random() * 6) + 2;
+    var size = 2 + Math.floor(Math.random() * 4);
 
     // Fetch all of certain size
     SetModel.find({'size': size}, function (err, data) {
