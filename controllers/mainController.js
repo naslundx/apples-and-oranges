@@ -4,6 +4,19 @@ var mongoose = require('mongoose');
 // Connect to database
 mongoose.connect('');
 
+// List randomizer (Fisher-Yates (aka Knuth) Shuffle algorithm)
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (currentIndex > 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+
 // Schema for sets
 var SetModel = mongoose.model('sets', new mongoose.Schema({
     size: Number,
@@ -36,6 +49,8 @@ app.get('/', function(req, res) {
         }
         var first = Math.floor(Math.random() * data.length);
         var second = (first + 1 + Math.floor(Math.random() * (data.length - 1))) % data.length;
+        data[first].items = shuffle(data[first].items);
+        data[second].items = shuffle(data[second].items);
 
         res.render('main', {firstId: data[first].id, secondId: data[second].id, first: data[first], second: data[second]});
     });
