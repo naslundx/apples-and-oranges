@@ -398,6 +398,7 @@ ul.contact li a.icon-rss:before
 {
 	position: relative;
 	height: 100px;
+	padding: 0em 2em;
 }
 
 /*********************************************************************************/
@@ -958,21 +959,44 @@ ul.contact li a.icon-rss:before
 
 #wel
 {
-	padding: 5em 0em;
+	padding: 1em 2em;
+	margin: 1em;
 	background: #E8E7C1;
+	text-align: center;
+}
+
+#wel2
+{
+	padding: 2em 2em;
+	margin: 1em;
+	background: #D8D7C1;
 	text-align: center;
 }
 
 #wel a
 {
-	color: #45543D;
+	color: #383731;
 }
 
 #wel h2
 {
-	padding-bottom: 0.50em;
+	padding-bottom: 0.20em;
 	font-weight: 400;
 	font-size: 3em;
+}
+
+#wel2 p
+{
+	color: #222;
+	text-align: justify;
+}
+
+#wel2 h2
+{
+	padding-bottom: 0.20em;
+	font-weight: 400;
+	font-size: 2em;
+	color: #222;
 }
 
 #wel .button
