@@ -3,8 +3,7 @@
         <title>Apples and oranges</title>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-        <link href="assets/default.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="assets/fonts.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="assets/skeleton.css" rel="stylesheet" type="text/css" media="all" />
         <script src="assets/client-to-server.js"></script>
         <script src="assets/Sortable.js">
             var el = document.getElementById('items');
@@ -24,65 +23,41 @@
     <body>
 
 <!-- HEADER -->
-<div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<h1></span><a href="#">Apples and oranges</a></h1>
-		</div>
-		<div id="menu">
-			<ul>
-				<li class="current_page_item"><a href="/" accesskey="1" title="">Match up!</a></li>
-				<li><a href="about" accesskey="2" title="">About</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
+LOGO <a href="/">Match up!</a> <a href="/about">About</a> <a href="/about#contact">Contact</a>
+
+
+<!-- INFO -->
+<h2>Can you pair up <%= first.title %> with <%= second.title %>?</h2>
+<p>They don't have anything in common... or do they?</p>
+<p>Drag to rearrange!</p>
+
 
 <!-- LISTS -->
-<div id="wrapper">
-	<div id="featured-wrapper">
-		<div id="featured" class="extra2 margin-btm container">
-			<div class="main-title">
-				<h2>Can you pair up <%= first.title %> with <%= second.title %>?</h2>
-				<span class="byline">They don't have anything in common... or do they?</span> </div>
-
-
-			<div class="ebox1"> <!--<span class="fa fa-pagelines"></span>-->
-				<div class="title">
-					<h2 id="list-title-1"><%= first.title %></h2>
-					<!--<span class="byline">AAA</span>-->
-                    <div id="firstList" class="list-group">
-                        <% for(var i=0; i < first.items.length; i++) { %>
-                            <div class="list-group-item-1">
-                                <!--<img src= "assets/img/<%= first.items[i] %>.png"/>-->
-                                <%= first.items[i] %>
-                            </div>
-                        <% } %>
-                    </div>
-                </div>
-				<!--<p>text</p>-->
+<div>
+    <h3><%= first.title %></h3>
+    <div id="firstList">
+        <% for(var i=0; i < first.items.length; i++) { %>
+            <div>
+                <!--<img src= "assets/img/<%= first.items[i] %>.png"/>-->
+                <%= first.items[i] %>
             </div>
-			<div class="ebox2">
-				<div class="title">
-					<h2 id="list-title-2"><%= second.title %></h2>
-					<!--<span class="byline">BBB</span>-->
-                    <div id="secondList">
-                        <% for(var i=0; i < second.items.length; i++) { %>
-                            <div class="list-group-item-2">
-                                <!--<img src= "assets/img/<%= second.items[i] %>.png"/>-->
-                                <%= second.items[i] %>
-                            </div>
-                        <% } %>
-                    </div>
-                </div>
-				<!--<p>text</p>-->
-            </div>
-				
-		</div>
-        <!--<a href="#" class="button">Etiam posuere</a> </div>-->
-        <form><button type="submit" class="button">Done</button></form>
-	</div>
+        <% } %>
+    </div>
 </div>
+				
+<div>
+    <h3><%= second.title %></h3>
+    <div id="secondList">
+        <% for(var i=0; i < second.items.length; i++) { %>
+            <div>
+                <!--<img src= "assets/img/<%= second.items[i] %>.png"/>-->
+                <%= second.items[i] %>
+            </div>
+        <% } %>
+    </div>
+</div>
+				
+<form><button type="submit" class="button">Done</button></form>
 
 <!-- ADD SORTABLE CONTAINERS -->
 <script language="javascript">
@@ -115,10 +90,9 @@
 </script>
 
 <!-- FOOTER -->
-<div id="copyright" class="container">
-    <p>&copy; 2017 Marcus Näslund. All rights reserved. | <a href="about">What is this?</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+<div id="">
+    <p>&copy; 2017 Marcus Näslund. All rights reserved. | <a href="about">What is this?</a></p>
 </div>
-
         
     </body>
 </html>
