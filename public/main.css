@@ -1,0 +1,60 @@
+/* MAIN */
+
+main {
+	position: relative;
+}
+
+#content {
+	padding-top: 4em;
+}
+
+#header {
+	background: #dee;
+	padding-top: 2em;
+	margin-bottom: 4em;
+}
+
+#info {
+	text-align: center;
+}
+
+#leftList {
+    text-align: right;
+}
+
+#leftListContent {
+	cursor: move;
+}
+
+#rightList {
+    text-align: left;
+}
+
+#rightListContent {
+	cursor: move;
+}
+
+#centerList {
+    text-align: center;
+}
+
+#submit {
+	text-align: center;
+}
+
+#footer {
+	text-align: center;
+	position: fixed; 
+    bottom:1%;
+	width: 99%;
+	font-size: 1.5em;
+	background: #355;
+	color: white;
+}
+
+#footerstatic {
+	text-align: center;
+	font-size: 1.5em;
+	background: #355;
+	color: white;
+}

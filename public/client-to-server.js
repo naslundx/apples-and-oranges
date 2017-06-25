@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $('form').on('submit', function(){
+  $('form.toserver').on('submit', function(){
 
       var result = {
         firstId: firstId,

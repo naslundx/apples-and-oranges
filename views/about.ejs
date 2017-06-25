@@ -3,6 +3,7 @@
         <title>Apples and oranges</title>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
         <link href="assets/skeleton.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="assets/main.css" rel="stylesheet" type="text/css" media="all" />
         <script src="/assets/client-to-server.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -17,58 +18,84 @@
     </head>
     <body>
 
-<!-- HEADER -->
-LOGO <a href="/">Match up!</a> <a href="/about">About</a> <a href="/about#contact">Contact</a>
 
-<!-- TITLE -->
-<div id="">
-    <h2>What's it all about?</h2>
-    <p>Observing groups of people agreeing on patterns that don't exist.</p>
+<!-- HEADER -->
+<div id="header">
+<div class="container">
+    <div class="row">
+        <div class="eight columns">
+            <h3><strong>Apples and oranges</strong></h3>
+        </div>
+        <div class="two columns">
+            <form action="/">
+                <input class="button" type="submit" value="Match up!">
+            </form>
+        </div>
+        <div class="two columns">
+            <form action="/about">
+                <input class="button-primary" type="submit" value="About">
+            </form>
+        </div>
+    </div>
+</div>
 </div>
 
 <!-- CONTENT -->
-<div id="">
-    <h2>Patterns where none exist</h2>
-    <p>Apart from helping us make sense of the world, our brains continually find familiar patterns where none exist and convince us of their validity. This is known as Pareidolia.</p>
+<div class="container">
+  <div class="row">
+        <h2>What's it all about?</h2>
+       
+        <p>Observing groups of people agreeing on patterns that don't exist.</p>
 
-    <p>Humans are really intelligent. No, really. A great portion of this stems from our inherent ability to see patterns and identify similarities, and generalize from a small set of examples or data.</p>
-    
-    <p>We are, for example, great at telling a cat from a horse even if we haven't seen that particular cat or horse before. We can also identify two selfies as being of the same person, even when taken at slightly different angles and under different lighting conditons.</p>
-    
-    <p>These feats of intelligence were until recently extremely hard for computers to imitate, and still require complicated artificial neural networks and a lot of processing power. On the other hand, we humans are still very far from doing a billion 9-digit multiplications every second...</p>
+        <h2>Patterns where none exist</h2>
+        
+        <p>Apart from helping us make sense of the world, our brains continually find familiar patterns where none exist and convince us of their validity. This is known as Pareidolia.</p>
 
-    <p>Our pattern matching abilities are, unfortunately, hard to turn off. The "Face on Mars" is a common example.</p>
-    
-    <p>Drawing inferences too far from limited data, or seeing patterns that aren't there, leads us to making bad choices. Understanding our limitations is the first step to overcoming them.</p>
+        <p>Humans are really intelligent. No, really. A great portion of this stems from our inherent ability to see patterns and identify similarities, and generalize from a small set of examples or data.</p>
+        
+        <p>We are, for example, great at telling a cat from a horse even if we haven't seen that particular cat or horse before. We can also identify two selfies as being of the same person, even when taken at slightly different angles and under different lighting conditons.</p>
+        
+        <p>These feats of intelligence were until recently extremely hard for computers to imitate, and still require complicated artificial neural networks and a lot of processing power. On the other hand, we humans are still very far from doing a billion 9-digit multiplications every second...</p>
 
-    <img src="assets/martian_face.jpg"/>
+        <p>Our pattern matching abilities are, unfortunately, hard to turn off. The "Face on Mars" is a common example.</p>
+        
+        <p>Drawing inferences too far from limited data, or seeing patterns that aren't there, leads us to making bad choices. Understanding our limitations is the first step to overcoming them.</p>
 
-</div>
+        <center><img src="assets/martian_face.jpg"/></center>
 
-<div id="">
-    <h2>The purpose of this website</h2>
-    <p>This website hopes to illustrate both this practice of "false patterns", or Pareidolia, as well as how similarly our brains work at subconscious levels.
+        <h2>The purpose of this website</h2>
+        
+        <p>This website hopes to illustrate both this practice of "false patterns", or Pareidolia, as well as how similarly our brains work at subconscious levels.
             
         <p>The objective is to match up elements of two nonrelated sets, like the words "Boba" and "Tiki" together with either a smooth or jagged geometrical figure. Studies have shown that a vast majority consider "Boba" to be a better name for the smooth figure, even though it does not mean anything. This similarity in thinking may be one of the foundations of human communication.</p>
 
         <p>Were the choices on this website made completely at random, all possible combinations would, with enough testers, show up (approximately) equally often. But our brains, making up patterns where they don't belong, will make certain combinations far more likely.</p>
 
-        <p>At least, that's the theory. I hope you contribute with a few minutes of your time. Statistics will be posted and frequently updated on this site.</p>        
-</div>
+        <p>At least, that's the theory. I hope you contribute with a few minutes of your time. Statistics will be posted and frequently updated on this site.</p>      
 
-<div id="contact">
-    <h2>About me</h2>
-    <p>My name is Marcus Näslund and I am a software developer and mathematician in Sweden.</p>
+        <h2>About me</h2>
+        <p>My name is Marcus Näslund and I am a software developer and mathematician in Sweden.</p>
 
-    <p>If you think this is a great (or terrible) idea, have more questions, or just want to help fill up my inbox, e-mail me at <b>naslundx (at) gmail (dot) com</b>.
+        <p>If you think this is a great (or terrible) idea, have more questions, or just want to help fill up my inbox, e-mail me at <b>naslundx (at) gmail (dot) com</b>.
 
-    <p><a href="/">Let's get started!</a></p>
-        
+        <form action="/">
+            <button type="submit" value="Let's get started!">Let's get started!</button>
+        </form>
+
+
+    </div>
+    <div class="one column"></div>
+  </div>
+
 </div>
 
 <!-- FOOTER -->
-<div id="">
-    <p>&copy; 2017 Marcus Näslund. All rights reserved. | <a href="about">What is this?</a></p>
+<div id="footerstatic">
+    <div class="container">
+        <div class="row">
+            &copy; 2017 Marcus Näslund. All rights reserved.
+        </div>
+    </div>
 </div>
 
     </body>
