@@ -1,48 +1,36 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Apples and oranges</title>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-        <link href="assets/skeleton.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="assets/main.css" rel="stylesheet" type="text/css" media="all" />
-        <script src="/assets/client-to-server.js"></script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<head>
 
-            ga('create', 'UA-100880173-1', 'auto');
-            ga('send', 'pageview');
+<title>Apples and oranges</title>
+<link href="static/skeleton.css" rel="stylesheet" type="text/css" media="all" />
+<link href="static/main.css" rel="stylesheet" type="text/css" media="all" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Humorous puns based on the title of the game No Man's Sky.">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
-        </script>
-    </head>
-    <body>
+<body>
 
-
-<!-- HEADER -->
-<div id="header">
-<div class="container">
-    <div class="row">
-        <div class="eight columns">
-            <h3><strong>Apples and oranges</strong></h3>
-        </div>
-        <div class="two columns">
-            <form action="/">
-                <input class="button" type="submit" value="Match up!">
-            </form>
-        </div>
-        <div class="two columns">
-            <form action="/about">
-                <input class="button-primary" type="submit" value="About">
-            </form>
-        </div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-blue w3-hide-small" id="myNavbar">
+      <a href="/about" class="w3-bar-item w3-button w3-right w3-xlarge"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="/results" class="w3-bar-item w3-button w3-right w3-xlarge"><i class="fa fa-bar-chart"></i> RESULTS</a>
+      <a href="/" class="w3-bar-item w3-button w3-right w3-xlarge"><i class="fa fa-refresh"></i> MATCH UP!</a>
     </div>
-</div>
+    <div class="w3-bar w3-black w3-hide-medium w3-hide-large" id="myNavbar">
+      <a href="/about" class="w3-bar-item w3-button w3-right w3-large"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="/results" class="w3-bar-item w3-button w3-right w3-large"><i class="fa fa-bar-chart"></i> RESULTS</a>
+      <a href="/" class="w3-bar-item w3-button w3-right w3-large"><i class="fa fa-refresh"></i> MATCH UP!</a>
+    </div>
 </div>
 
 <!-- CONTENT -->
-<div class="container">
-  <div class="row">
+<div class="bgimg-1 w3-display-container" id="home">
         <h2>What's it all about?</h2>
        
         <p>Observing groups of people agreeing on patterns that don't exist.</p>
@@ -81,22 +69,19 @@
         <form action="/">
             <button type="submit" value="Let's get started!">Let's get started!</button>
         </form>
-
-
-    </div>
-    <div class="one column"></div>
-  </div>
-
 </div>
 
-<!-- FOOTER -->
-<div id="footerstatic">
-    <div class="container">
-        <div class="row">
-            &copy; 2017 Marcus Näslund. All rights reserved.
-        </div>
-    </div>
-</div>
-
-    </body>
+<!-- Footer -->
+<footer class="w3-center footer-color footer-margin" id="about">
+    <h3 class="w3-center">ABOUT</h3>
+    <p class="w3-center"><em>How predictable are we, really?</em></p>
+    <p>This is a semi-scientific look at how we humans think. Otherwise, I'm an AI/ML software engineer. If you like puns, you might also like <a href="http://www.nomansski.com">No Man's Ski</a>.</a></p>
+    <div class="w3-xlarge w3-section">
+        <!-- TODO -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnomansski.com%2F&amp;src=sdkpreparse" target="_blank" class="fa fa-facebook-official w3-hover-opacity"></a>
+        <a href="https://twitter.com/intent/tweet?text=No+man%27s+ski%3A+https%3A%2F%2Fnomansski.com" target="_blank" class="fa fa-twitter w3-hover-opacity"></a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fnomansski.com&title=No+man%27s+ski&summary=No+man%27s+sky+puns&source=LinkedIn" target="_blank" class="fa fa-linkedin w3-hover-opacity"></a>        
+</footer>
+ 
+</body>
 </html>
